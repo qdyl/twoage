@@ -1,0 +1,310 @@
+/* 重置样式*/
+.disnone{
+  display: none;
+}
+a:hover,a:focus{
+  text-decoration: none!important;
+}
+ul,ol,li{
+  list-style-type: none;
+}
+ul{
+  padding-left: 0;
+}
+
+/* 公用样式(头部+底部)*/
+body{
+  font-family: MicrosoftYaHeiUI;
+}
+
+.header{
+
+  height: 130px;
+  line-height: 130px;
+  border-bottom: solid 1px #1bc4ad;
+  .left-header-logo{
+    max-width: 100%;
+    height: 98px;
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .right-loginOrRegister{
+    color: #4e4e4e;
+    font-size: 18px;
+    .user-login{
+      padding: 15px;
+      cursor: pointer;
+    }
+    .user-register{
+      padding: 15px;
+      cursor: pointer;
+
+    }
+
+  }
+  .right-exit{
+    color: #666666;
+    font-size: 18px;
+    .user-name{
+      color: #00a48e;
+      padding-left: 10px;
+    }
+    .loginout{
+      color: #4e4e4e;
+      padding: 20px;
+      cursor: pointer;
+    }
+  }
+}
+.order-pay-flow{
+  margin-top: 40px;
+  .flow-item{
+    position: relative;
+    background-color: #ededed;
+    color: #414141;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    &:last-child:after{
+      width: 0;
+      height: 0;
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 40px;
+      background-color: #fff;
+      right: 0;
+      top: 0;
+    }
+  }
+  .flow-on{
+    background-color: #1bc4ad;
+    color: #fff;
+  }
+  .l-border-radius{
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px;
+  }
+  .r-border-radius{
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+.footer{
+  margin-top: 100px;
+  .footer-link{
+    text-align: center;
+    .link-a{
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+      font-size: 16px;
+      &:first-child:before{
+        width: 0;
+        height: 0;
+        border: none;
+      }
+      &:before{
+        position: absolute;
+        left: -14px;
+        top: 2px;
+        content: '';
+        display: inline-block;
+        width: 2px;
+        height: 18px;
+        border-left: 1px dotted #333333;
+      }
+    }
+    a{
+      color: #337ab7;
+    }
+  }
+  .footer-copy{
+    text-align: center;
+    .beian-img{
+      vertical-align: middle;
+    }
+    a{
+      display: inline-block;
+      margin: 6px 10px;
+      color: #333;
+    }
+  }
+
+}
+
+/* 支付页面样式*/
+.topayMyorder-main{
+
+  .myorder-curpay{
+    text-align: center;
+
+  }
+  .curpay-img{
+    display: inline-block;
+    margin: 0 40px;
+    vertical-align: super;
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+  .curpay-msg{
+    display: inline-block;
+    font-size: 18px;
+    text-align: left;
+    .tit{
+      line-height: 60px;
+      color: #2a2a2a;
+    }
+    .order-detail{
+      line-height: 30px;
+      color: #2a2a2a;
+    }
+    .msg-info{
+      margin-top: 20px;
+      line-height: 30px;
+      color: #e91111;
+    }
+
+  }
+  .choose-topay-ways{
+    margin-top: 60px;
+    .pay-way-title{
+      font-size: 24px;
+    }
+    .pay-way-ul{
+      margin-top: 40px;
+    }
+    .pay-way-item{
+      height: 78px;
+      cursor: pointer;
+    }
+    .zhifubao{
+      background: url("../images/hzifubao-pay.png") no-repeat center 100%;
+    }
+    .weixin{
+      background: url("../images/weixin-pay.png") no-repeat center 100%;
+    }
+
+
+  }
+  /* 支付弹窗*/
+  .modal{
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .modal-header{
+    background-color: #1bc4ad;
+    color: #ffffff;
+    &.zhifubao-modal-header{
+      background-color: #049fe8;
+    }
+    .modal-title{
+      font-size: 24px;
+    }
+    .close{
+      color: #FFF;
+      opacity:1;
+      font-size: 50px;
+      font-weight: 100;
+      margin-top: -15px;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+  .modal-body{
+    padding-bottom: 25px;
+    text-align: center!important;
+    .modal-body-title{
+      color: #ff2d2d;
+      font-size: 24px;
+    }
+    .modal-body-img{
+      width: 266px;
+      height: 264px;
+      margin: 10px 0 15px;
+    }
+    .modal-body-info{
+      color: #4c4c4c;
+      line-height: 30px;
+      font-size: 18px;
+    }
+    .pay-key-word{
+      color: #ff2d2d;
+      &.zhifubao{
+        color: #049fe8;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 移动端-媒体查询*/
+@media (max-width: 768px) {
+  .header{
+    height: 80px;
+    line-height: 80px;
+  }
+  /* 支付流程*/
+  .order-pay-flow{
+    font-size: 14px;
+    ul{
+      margin: 0;
+    }
+  }
+  /* 主体*/
+  .topayMyorder-main {
+    .choose-topay-ways{
+      margin: 30px 0 0;
+    }
+    .tit{
+      font-size: 18px;
+    }
+    .curpay-msg{
+      font-size: 14px;
+    }
+    .curpay-img{
+      margin: 0 5px 0;
+    }
+    .choose-topay-ways{
+      .pay-way-item{
+        border: 1px solid #c1c1c1;
+      }
+      .zhifubao{
+        margin-right: 10px;
+      }
+    }
+    /* 弹窗*/
+    .modal{
+      top: 50%;
+      height: 100vh;
+    }
+  }
+
+}
