@@ -1,0 +1,168 @@
+.fl {
+  float: left;
+}
+.goodstable {
+  color: #2a2a2a;
+	font-size: 18px;
+  text-align: center;
+  line-height: 56px;
+  margin-top: 42px;
+}
+.goodstable-header {
+  height: 56px;
+  background-color: #ededed;
+}
+.goodstable-body {
+  border: 1px solid #d1d1d1;
+  border-top: 0; 
+}
+.goodstable-body .col-sm-8 {
+  border-right: 1px solid #d1d1d1;
+}
+.agree {
+  margin-top: 24px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #d2d2d2;
+  font-size: 14px;
+  color: #454545;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: #fff;
+  margin-top: 0;
+  /* border: 1px solid #999999; */
+  position: relative;
+  cursor: pointer;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+.checkbox input[type=checkbox],
+.checkbox input[type=radio] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox .checkbox-after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999999;
+}
+.checkbox input:checked+.checkbox-after {
+  background: url(../images/check.png) no-repeat 100%;
+  border-color: #fff;
+}
+.agree a {
+  text-decoration: underline;
+}
+.balance label{
+  font-size: 18px;
+  color: #3d3d3d;
+  margin-top: 33px;
+  margin-bottom: 25px;
+}
+.select {
+  width: 278px;
+	height: 43px;
+	border-radius: 4px;
+  border: solid 1px #999999;
+  padding: 0 30px 0 12px;
+  position: relative;
+  background: url(../images/select-drop.jpg) no-repeat 248px 18px/18px 9px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: #fff;
+  outline: 0;
+}
+.invitationCode,
+.input {
+  width: 278px;
+	height: 43px;
+	border-radius: 4px;
+  border: solid 1px #999999;
+  font-size: 14px;
+  padding: 0 12px;
+}
+.balance {
+  padding-bottom: 45px;
+  border-bottom: 1px solid #d2d2d2;
+}
+.invoice {
+  padding-top: 10px;
+}
+.invoice-item {
+  margin-top: 34px;
+}
+.invoice-left {
+  width: 147px;
+  float: left;
+  font-size: 18px;
+  color: #3d3d3d;
+  font-weight: normal;
+}
+.invoice-label {
+  font-weight: bold;
+}
+.radio-box {
+  float: left;
+  margin-right: 34px;
+}
+.invoice-left2 {
+  line-height: 43px;
+}
+.red {
+  color: #ef0808;
+}
+.examservice {
+  color: #3d3d3d;
+  font-size: 18px;
+  line-height: 43px;
+}
+.submit-box {
+  margin-top: 64px;
+  text-align: right;
+}
+.submit-box .submit {
+  width: 152px;
+	height: 56px;
+  background-color: #e91111;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 56px;
+  border: 0;
+  margin-left: 50px;
+}
+.submit-box span {
+  line-height: 56px;
+  color: #2a2a2a;
+  font-size: 18px;
+}
+.submit-box span.money {
+  color: #e91111;
+  font-size: 22px;
+}
+.required .tip {
+  color: #ef0808;
+  display: none;
+}
+.required.error .tip {
+  display: inline;
+}
+.required.error input {
+  border-color: #ef0808;
+}
+@media (max-width: 767px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

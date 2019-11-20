@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提交订单</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" href="http://example.com/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/submitOrder.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- 头部-->
+  <header class="header">
+      <div class="container">
+          <!-- 头部logo、登录、退出-->
+          <div class="row clearfix">
+              <div class="left-header-logo col-xs-6 col-md-6">
+                  <img src="images/header-logo-img.png" alt="">
+              </div>
+              <div class="right-loginOrRegister pull-right">
+                  <span class="user-login">登录</span>
+                  <span class="user-register">注册</span>
+              </div>
+              <div class="right-exit pull-right disnone">
+                  欢迎您：<span class="user-name">zhanglili  </span>
+                  <span class="loginout">退出</span>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- 支付流程(公用)-->
+  <section class="container order-pay-flow">
+      <ul class="row clearfix  ">
+          <li class="col-xs-4 flow-item l-border-radius flow-on">1、我的订单</li>
+          <li class="col-xs-4 flow-item">2、选择支付</li>
+          <li class="col-xs-4 flow-item r-border-radius">3、购课成功</li>
+      </ul>
+  </section>
+  
+  <!-- 主体-->
+  <main class="container">
+    <div class="row goodstable">
+      <div class="goodstable-header">
+        <div class="col-sm-8 col-xs-6">商品名称</div>
+        <div class="col-sm-4 col-xs-6">商品价格</div>
+      </div>
+      <div class="goodstable-body clearfix">
+        <div class="col-sm-8 col-xs-6">2019年临床执业医师进修重学班</div>
+        <div class="col-sm-4 col-xs-6">¥ 180</div>
+      </div>
+    </div>
+    <div class="agree row">
+      <div class="checkbox"><input id="accept" type="checkbox" checked="checked"><span class="checkbox-after"></span></div>
+      我已阅读并同意 <a href="javascript:;">2020年护士执业资格考试高端私教班协议书</a>
+    </div>
+    <div class="balance row">
+      <label for="">账户余额</label>
+      <div>
+        <div class="checkbox"><input type="checkbox"><span class="checkbox-after"></span></div>
+        当前用户余额:（¥ 5000.00） 本次使用账户余额:（¥ 180.00）
+      </div>
+      <label for="">优惠券</label>
+      <div>
+        <select class="select" name="" id="">
+          <option value="">优惠券1</option>
+          <option value="">优惠券2</option>
+          <option value="">优惠券3</option>
+        </select>
+      </div>
+      <label for="">邀请码</label>
+      <div>
+        <input class="invitationCode" type="text" placeholder="请输入邀请码">
+      </div>
+    </div>
+    <div class="row invoice">
+      <div class="invoice-item clearfix">
+        <label class="invoice-label invoice-left" for="">是否开具发票</label>
+        <div class="radio-box">
+          <div class="checkbox"><input type="radio" name="invoice" checked="checked" value="yes"><span class="checkbox-after"></span></div>
+          是
+        </div>
+        <div class="radio-box">
+          <div class="checkbox"><input type="radio" name="invoice" value="no"><span class="checkbox-after"></span></div>
+          否
+        </div>
+      </div>
+      <div id="allowInvoice">
+        <div class="invoice-item clearfix">
+          <label class="invoice-left" for="">发票抬头类型：</label>
+          <div class="radio-box">
+            <div class="checkbox"><input type="radio" name="invoicetype"><span class="checkbox-after"></span></div>
+            个人
+          </div>
+          <div class="radio-box">
+            <div class="checkbox"><input type="radio" name="invoicetype" checked="checked" ><span class="checkbox-after"></span></div>
+            企业
+          </div>
+        </div>
+        <div class="invoice-item clearfix required">
+          <label class="invoice-left invoice-left2" for=""><span class="red">*</span>发票抬头：</label>
+          <input class="input" type="text" placeholder="请填写公司发票抬头">
+          <span class="tip">必填项！</span>
+        </div>
+        <div class="invoice-item clearfix required">
+          <label class="invoice-left invoice-left2" for=""><span class="red">*</span>纳税人识别号：</label>
+          <input class="input" type="text" placeholder="请填写纳税人识别号">
+          <span class="tip">必填项！</span>
+        </div>
+        <div class="invoice-item clearfix ">
+          <label class="invoice-left invoice-left2" for="">发票内容：</label>
+          <span class="examservice">考试服务</span>
+        </div>
+        <div class="invoice-item clearfix required">
+          <label class="invoice-left invoice-left2" for=""><span class="red">*</span>收票人手机：</label>
+          <input class="input" type="text" placeholder="请填写收票人手机号">
+          <span class="tip">必填项！</span>
+        </div>
+      </div>
+    </div>
+    <div class="row submit-box">
+      <span>应付金额：</span><span class="money">¥ 180</span>
+      <button type="button" class="submit" id="submitOrder">提交订单</button>
+    </div>
+  </main>
+  <!-- 模态框（Modal） -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" 
+              aria-hidden="true">×
+          </button>
+          <h4 class="modal-title" id="myModalLabel">
+            提示
+          </h4>
+        </div>
+        <div class="modal-body" id="modalContent">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">
+            确认
+          </button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- 底部-->
+  <footer class="footer">
+      <ul class="footer-link">
+          <li class="link-a">
+              <a href="">关于我们</a>
+          </li>
+          <li class="link-a">
+              <a href="">网站地图</a>
+          </li>
+          <li class="link-a">
+              <a href="">联系我们</a>
+          </li>
+          <li class="link-a">
+              <a href="">招贤纳士</a>
+          </li>
+          <li class="link-a">
+              <a href="">网站声明</a>
+          </li>
+
+
+      </ul>
+      <div class="footer-copy">
+          <a href="">©2019 人民卫生电子音像出版社主办</a>
+          <a href="">京ICP备14053810号-2</a>
+          <a href="" class="gongan-beian"><img class="beian-img" src="images/gongan-img.png" alt="">京公网安备 1101 0502031110号</a>
+      </div>
+  </footer>
+  <script>
+    $(function() {
+      //切换是否开具发票
+      $('input[name=invoice]').change(function() {
+        if(this.value == 'yes') {
+          $('#allowInvoice').show()
+        } else {
+          $('#allowInvoice').hide()
+        }
+      })
+      // 提交订单
+      $('#submitOrder').click(function() {
+        if(!$('#accept').prop('checked')) {
+          $('#modalContent').html('请阅读并同意协议')
+          $('#modal').modal()
+          return
+        }
+        var valid = true
+        console.log($('input[name=invoice]:checked').val())
+        if ($('input[name=invoice]:checked').val() === 'yes') {
+          for(var i = 0; i < $('.required').length; i ++) {
+            if($.trim($('.required').eq(i).children('input').val()) === '') {
+              $('.required').eq(i).addClass('error')
+              valid = false
+            } else {
+              $('.required').eq(i).removeClass('error')
+            }
+          }
+        }
+        if(valid) {
+          //订单提交请求
+        } else {
+          $('#modalContent').html('请将信息填写完整！')
+          $('#modal').modal()
+        }
+      })
+    })
+  </script>
+</body>
+</html>
