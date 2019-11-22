@@ -191,12 +191,7 @@ body {
   background: url("../images/weixin-pay.png") no-repeat center 100%;
 }
 .topayMyorder-main .modal {
-  top: 40%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 10%;
 }
 .topayMyorder-main .modal-header {
   background-color: #1bc4ad;
@@ -278,7 +273,7 @@ body {
     margin-right: 10px;
   }
   .topayMyorder-main .modal {
-    top: 50%;
+    top: 2%;
     height: 100vh;
   }
 }
