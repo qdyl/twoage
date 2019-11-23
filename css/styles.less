@@ -64,8 +64,8 @@ body{
     position: relative;
     background-color: #ededed;
     color: #414141;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     font-size: 18px;
     &:last-child:after{
@@ -76,7 +76,7 @@ body{
       position: absolute;
       content: '';
       width: 3px;
-      height: 40px;
+      height: 100%;
       background-color: #fff;
       right: 0;
       top: 0;
@@ -186,14 +186,16 @@ body{
       margin-top: 40px;
     }
     .pay-way-item{
-      height: 78px;
+      height: 75px;
       cursor: pointer;
+      border: 1px solid #c1c1c1;
     }
     .zhifubao{
-      background: url("../images/hzifubao-pay.png") no-repeat center 100%;
+      margin-right: 15px;
+      background: #fff url("../images/hzifubao-pay.png") no-repeat center/40%;
     }
     .weixin{
-      background: url("../images/weixin-pay.png") no-repeat center 100%;
+      background: #fff url("../images/weixin-pay.png") no-repeat center/40%;
     }
 
 
@@ -272,24 +274,43 @@ body{
     ul{
       margin: 0;
     }
+    .flow-item{
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+    }
   }
   /* 主体*/
   .topayMyorder-main {
     .choose-topay-ways{
       margin: 30px 0 0;
     }
-    .tit{
-      font-size: 18px;
-    }
+
     .curpay-msg{
       font-size: 14px;
+      .msg-info{
+        margin-top: 10px;
+      }
+      .tit{
+        font-size: 18px;
+        line-height: 45px;
+      }
     }
     .curpay-img{
       margin: 0 5px 0;
+      width: 45px;
     }
     .choose-topay-ways{
+      .pay-way-ul{
+        margin-top: 20px;
+      }
       .pay-way-item{
+        height: 60px;
         border: 1px solid #c1c1c1;
+        background-size: 50%;
+        &.weixin{
+          background-size: 60%;
+        }
       }
       .zhifubao{
         margin-right: 10px;
@@ -301,5 +322,16 @@ body{
       height: 100vh;
     }
   }
+}
+
+@media (max-width: 412px) {
+  .topayMyorder-main{
+    .choose-topay-ways{
+      .pay-way-item{
+        height: 45px;
+      }
+    }
+  }
+
 
 }
