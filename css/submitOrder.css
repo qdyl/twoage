@@ -16,6 +16,10 @@
   border: 1px solid #d1d1d1;
   border-top: 0; 
 }
+.goodstable-body div {
+  line-height: 30px;
+  padding: 8px 15px;
+}
 .goodstable-body .col-sm-8 {
   border-right: 1px solid #d1d1d1;
 }

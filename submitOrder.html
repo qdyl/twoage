@@ -56,7 +56,7 @@
     </div>
     <div class="agree row">
       <div class="checkbox"><input id="accept" type="checkbox" checked="checked"><span class="checkbox-after"></span></div>
-      我已阅读并同意 <a href="javascript:;">2020年护士执业资格考试高端私教班协议书</a>
+      我已阅读并同意 <a id="agreement" data-toggle="modal" data-target="#agreeModal" href="javascript:;">2020年护士执业资格考试高端私教班协议书</a>
     </div>
     <div class="balance row">
       <label for="">账户余额</label>
@@ -127,8 +127,8 @@
       <button type="button" class="submit" id="submitOrder">提交订单</button>
     </div>
   </main>
-  <!-- 模态框（Modal） -->
-<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <!-- 提示模态框 -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog  modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -148,7 +148,74 @@
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+  </div>
+  <!-- /提示模态框 -->
+  <!-- 协议模态框 -->
+  <div class="modal fade" id="agreeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" 
+              aria-hidden="true">×
+          </button>
+        </div>
+        <div class="modal-body" id="agreeModalContent">
+            协议书有广义和狭义之分。广义的协议书是指社会集团或个人处理各种社会关系、事务时常用的“契约”类文书，包括合同、议定书、条约、公约、联合宣言、联合声明、条据等。狭义的协议书指国家、政党、企业、团体或个人就某个问题经过谈判或共同协商，取得一致意见后，订立的一种具有经济或其它关系的契约性文书。协议书是应用写作的重要组成部分。
+            协议书是社会生活中，协作的双方或数方，为保障各自的合法权益，经双方或数方共同协商达成一致意见后，签订的书面材料。协议书是契约文书的一种。是当事人双方（或多方）为了解决或预防纠纷，或确立某种法律关系，实现一定的共同利益、愿望，经过协商而达成一致后，签署的具有法律效力的记录性应用文。
+            中文名协议书外文名Agreement分    类广义和狭义地    位应用写作的重要组成部分目    的保障各自的合法权益
+            目录
+            1 格式
+            2 法律效应
+            3 实例
+            ▪ 技术合作
+            ▪ 购房
+            ▪ 合作经营
+            ▪ 就业
+            ▪ 销售代理
+            ▪ 赡养继承
+            ▪ 店面转让
+            格式编辑
+            1 、标题：双方单位名称事由，协议书三部分组成。
+            2 、正文：条款内容
+            协商目的
+            协商目的责任
+            协议的时间和期限
+            协商目的条款和酬金{价格明确总额大写必须明确货币种类}
+            履行条款期限
+            违反条款的责任处理
+            落款{签署}
+            签署日期
+            法律效应编辑
+            订立协议书，其目的是为了更好地从制度上乃至法律上，把双方协议所承担的责任固定下来。作为一种能够明确彼此权利与义务、具有约束力的凭证性文书，协议书对当事人双方（或多方）都具有制约性，它能监督双方信守诺言、约束轻率反悔行为，它的作用，与合同基本相同。
+            口头协议一律无效；书面协议有三种形式，即合同中的条款、独立的协议书及信函、电报、传真、电子邮件等其他书面形式。
+            实例编辑
+            农村土地转让
+            农村土地转让合同图片
+            农村土地转让合同图片
+            转让方(以下简称甲方)：_________
+            受让方(以下简称乙方)：_________
+            甲乙双方依据《中华人民共和国农村土地承包法》等有关法律、法规和国家有关政策的规定，本着平等、自愿、有偿的原则，就土地承包经营权转让事宜协商一致，订立本合同。
+            一、转让目的
+            甲方将其承包经营的_________乡(镇)_________村_________组_________亩土地(地块名称、等级、四至、土地用途附后)的承包经营权转让给乙方从事_________(主营项目)生产经营。
+            二、转让期限
+            转让的土地承包经营权年限为_________年，即自_________年_________月_________日起至_________年_________月_________日止。
+            三、转让价格
+            转让的土地承包经营权的转让金为_________元人民币。甲方承包经营相关地块时对该地块实际投入资金和人力改造的，可收取合理的补偿金。本合同的补偿金为_________元(没有补偿金时可填写为零元)。两项合计总金额为_________元人民币。
+            四、支付方式和时间
+            乙方采取下列第_________种方式和时间支付转让金和补偿金：
+            1、现金方式(一次或分次)支付转让金和补偿金(无补偿金时可划去)，支付的时间为_________。
+            2、实物方式(一次或分次)支付转让金和补偿金(无补偿金时可划去)，实物为_________(具体内容见附件)。时间为_________。
+            五、土地承包经营权的交付时间和方式
+            甲方应于_________年_________月_________日前将转让承包经营权的土地交付乙方。
+            交付方式为_________或实地一次性全部交付。
+            六、承包经营权转让和使用的特别约定
+            1、转让土地承包经营权必须经发包方同意，并由甲方办理有关手续，在合同生效后甲方终止与发包方的承包关系。
+            2、甲方交付的承包经营土地必须符合双方约定的标准。
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <!-- /协议模态框 -->
   <!-- 底部-->
   <footer class="footer">
       <ul class="footer-link">
@@ -186,6 +253,7 @@
           $('#allowInvoice').hide()
         }
       })
+      
       // 提交订单
       $('#submitOrder').click(function() {
         if(!$('#accept').prop('checked')) {
@@ -212,6 +280,12 @@
           $('#modal').modal()
         }
       })
+    
+      // 查看协议
+      // $('#agreement').click(function() {
+      //   $('#agreeModal').modal()
+      //   // $('#agreeModal').toggle()
+      // })
     })
   </script>
 </body>
