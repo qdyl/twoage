@@ -27,7 +27,8 @@
                   <span class="user-register">注册</span>
               </div>
               <div class="right-exit pull-right disnone">
-                  欢迎您：<span class="user-name">zhanglili  </span>
+                  <span class="hidden-xs">欢迎您：</span>
+                  <span class="user-name">zhanglili  </span>
                   <span class="loginout">退出</span>
               </div>
           </div>
@@ -44,6 +45,22 @@
   
   <!-- 主体-->
   <main class="container">
+    <div class="row adress">
+      <div class="adress-title">确认收货地址</div>
+      <div class="adress-con clearfix">
+        <div class="col-sm-1 adress-to">寄送至</div>
+        
+        <!-- 有收货地址 -->
+        <div class="col-sm-9 adress-name">北京  北京市  海淀区  清河街道  安宁庄前街31号院北门  （王XX 收） 15210001430</div>
+        <div class="col-sm-2 adress-edit" data-toggle="modal" data-target="#adressModal">编辑</div>
+        <!-- /有收货地址 -->
+
+        <!-- 没有收货地址 -->
+        <!-- <span class="noadress">您还没有添加收货地址</span>
+        <span class="adress-add">添加</span> -->
+        <!-- /没有收货地址 -->
+      </div>
+    </div>
     <div class="row goodstable">
       <div class="goodstable-header">
         <div class="col-sm-8 col-xs-6">商品名称</div>
@@ -112,7 +129,7 @@
           <span class="tip">必填项！</span>
         </div>
         <div class="invoice-item clearfix ">
-          <label class="invoice-left invoice-left2" for="">发票内容：</label>
+          <label class="invoice-left invoice-left2 fapiaoneirong" for="">发票内容：</label>
           <span class="examservice">考试服务</span>
         </div>
         <div class="invoice-item clearfix required">
@@ -127,29 +144,6 @@
       <button type="button" class="submit" id="submitOrder">提交订单</button>
     </div>
   </main>
-  <!-- 提示模态框 -->
-  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog  modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" 
-              aria-hidden="true">×
-          </button>
-          <h4 class="modal-title" id="myModalLabel">
-            提示
-          </h4>
-        </div>
-        <div class="modal-body" id="modalContent">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-info" data-dismiss="modal">
-            确认
-          </button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>
-  <!-- /提示模态框 -->
   <!-- 协议模态框 -->
   <div class="modal fade" id="agreeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog  modal-lg">
@@ -216,6 +210,81 @@
     </div><!-- /.modal-dialog -->
   </div>
   <!-- /协议模态框 -->
+  <!-- 编辑收货地址 -->
+  <div class="modal fade" id="adressModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="adress-info">
+      <div class="info-title">
+        编辑收货人信息
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&nbsp;
+        </button>
+      </div>
+      <div class="info-con row">
+        <div class="clearfix">
+          <div class="col-sm-3 col-sm-offset-1">
+            <label for=""><span class="red">*</span>  所在地区</label>
+          </div>
+          <div class="col-sm-8 select-adress-box adress-require">
+            <input id="selectAdress" readonly="readonly" placeholder="请选择所在地区" data-toggle="popover" data-placement="bottom" data-content="" data-html="true">
+            <span class="tip">必填项！</span>
+          </div>
+        </div>
+        <div class="clearfix">
+          <div class="col-sm-3 col-sm-offset-1">
+            <label for=""><span class="red">*</span>  收货人</label>
+          </div>
+          <div class="col-sm-8 adress-require">
+            <input id="adressUserName" type="text" value="王世江" placeholder="请输入收货人姓名">
+            <span class="tip">必填项！</span>
+          </div>
+        </div>
+        <div class="clearfix">
+          <div class="col-sm-3 col-sm-offset-1">
+            <label for=""><span class="red">*</span>  详细地址</label>
+          </div>
+          <div class="col-sm-8 adress-require">
+            <input type="text" value="" placeholder="请输入详细地址">
+            <span class="tip">必填项！</span>
+          </div>
+        </div>
+        <div class="clearfix">
+          <div class="col-sm-3 col-sm-offset-1">
+            <label for=""><span class="red">*</span>  手机号码</label>
+          </div>
+          <div class="col-sm-8 adress-require">
+            <input type="text" value="" placeholder="请输入手机号码">
+            <span class="tip">必填项！</span>
+          </div>
+        </div>
+        <div class="col-sm-offset-4 col-sm-8">
+          <button type="button" class="save-adress" id="saveAdress">保存收货人信息</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /编辑收货地址 -->
+  <!-- 提示模态框 -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog  modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" 
+                aria-hidden="true">×
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+              提示
+            </h4>
+          </div>
+          <div class="modal-body" id="modalContent">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">
+              确认
+            </button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+    <!-- /提示模态框 -->
   <!-- 底部-->
   <footer class="footer">
       <ul class="footer-link">
@@ -280,12 +349,102 @@
           $('#modal').modal()
         }
       })
-    
-      // 查看协议
-      // $('#agreement').click(function() {
-      //   $('#agreeModal').modal()
-      //   // $('#agreeModal').toggle()
-      // })
+
+      // 地址选择
+      $.ajax({
+        url: 'http://testjkrh.ipmph.com/teach/member/district/province',
+        type: 'get',
+        success: function (data) {
+          if (data.status == 1) {
+            var dropHtml = '<ul class="popover-ul province-ul" id="adressDrop">'
+            data.data.forEach(function(item) {
+              dropHtml += '<li data-key="' + item.key + '">' + item.value + '</li>'
+            });
+            dropHtml += '</ul>'
+            // 手动初始化popover
+            $('#selectAdress').attr('data-content', dropHtml).popover()
+          }
+        }
+      })
+      var adressCodeList = []
+      var adressNameList = []
+      $(document).on('click', '.popover-ul li', function() {
+        var _this = this
+        if($(_this).parent('ul').hasClass('province-ul')) {
+          $.ajax({
+            url: 'http://testjkrh.ipmph.com/teach/member/district/city',
+            type: 'get',
+            data:{
+              provinceCode: $(_this).attr('data-key')
+            },
+            success: function (data) {
+              if (data.status == 1) {
+                adressCodeList = []
+                adressNameList = []
+                adressCodeList.push($(_this).attr('data-key'))
+                adressNameList.push($(_this).text())
+                $('#selectAdress').val(adressNameList.join('/'))
+                var dropHtml = ''
+                data.data.forEach(function(item) {
+                  dropHtml += '<li data-key="' + item.key + '">' + item.value + '</li>'
+                });
+                // 手动初始化popover
+                $('#adressDrop').removeClass('province-ul').addClass('city-ul')
+                $('#adressDrop').html(dropHtml)
+              }
+            }
+          })
+        }
+        if($(_this).parent('ul').hasClass('city-ul')) {
+          $.ajax({
+            url: 'http://testjkrh.ipmph.com/teach/member/district/district',
+            type: 'get',
+            data:{
+              cityCode: $(_this).attr('data-key')
+            },
+            success: function (data) {
+              if (data.status == 1) {
+                adressCodeList.push($(_this).attr('data-key'))
+                adressNameList.push($(_this).text())
+                $('#selectAdress').val(adressNameList.join('/'))
+                var dropHtml = ''
+                data.data.forEach(function(item) {
+                  dropHtml += '<li data-key="' + item.key + '">' + item.value + '</li>'
+                });
+                // 手动初始化popover
+                $('#adressDrop').removeClass('city-ul').addClass('district-ul')
+                $('#adressDrop').html(dropHtml)
+              }
+            }
+          })
+        }
+        if($(_this).parent('ul').hasClass('district-ul')) {
+          adressCodeList.push($(_this).attr('data-key'))
+          adressNameList.push($(_this).text())
+          $('#selectAdress').val(adressNameList.join('/'))
+          $('#selectAdress').popover('hide')
+        }
+      })
+      
+      //保存地址校验
+      $('#saveAdress').click(function() {
+        var valid = true
+        for(var i = 0; i < $('.adress-require').length; i ++) {
+          if($.trim($('.adress-require').eq(i).children('input').val()) === '') {
+            $('.adress-require').eq(i).addClass('error')
+            valid = false
+          } else {
+            $('.adress-require').eq(i).removeClass('error')
+          }
+        }
+        if(valid) {
+          //保存收货地址
+          $('#adressModal').modal('hide')
+        } else {
+          $('#modalContent').html('请将信息填写完整！')
+          $('#modal').modal()
+        }
+      })
     })
   </script>
 </body>

@@ -154,19 +154,146 @@
   color: #e91111;
   font-size: 22px;
 }
+.adress-require .tip,
 .required .tip {
   color: #ef0808;
   display: none;
 }
+.adress-require.error .tip,
 .required.error .tip {
   display: inline;
 }
+.adress-require.error input,
 .required.error input {
   border-color: #ef0808;
+}
+.adress {
+  padding: 20px 30px;
+  border: solid 1px #d1d1d1;
+  margin-top: 35px;
+}
+.adress div {
+  padding: 0;
+}
+.adress span {
+  font-size: 18px;
+}
+.adress span.adress-add {
+  color: #009d82;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.adress span.adress-add:hover,
+.adress-edit:hover{
+  color: #1bc4ad;
+}
+.adress .adress-title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.adress-to,
+.adress-name {
+  color: #333333;
+  font-size: 16px;
+}
+.adress-edit {
+  color: #009d82;
+  font-size: 16px;
+  text-align: right;
+  cursor: pointer;
+}
+.adress-con {
+  margin-bottom: 30px;
+}
+.adress-info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  width: 836px;
+  max-width: 80%;
+}
+.info-title{
+  height: 56px;
+  background-color: #ededed;
+  line-height: 56px;
+  color: #666666;
+  font-size: 18px;
+  padding: 0 20px;
+}
+.info-title button {
+  line-height: 56px;
+  width: 24px;
+  background: url(../images/adress-close.png) no-repeat center/24px 24px;
+}
+.info-con {
+  margin-top: 30px;
+  font-size: 18px;
+}
+.info-con>div {
+  margin-bottom: 20px;
+}
+.info-con label {
+  font-weight: normal;
+  margin-bottom: 0;
+  line-height: 43px;
+  color: #3d3d3d;
+}
+.info-con input {
+  border-radius: 4px;
+  border: solid 1px #999999;
+  width: 300px;
+  height: 43px;
+  padding: 0 13px;
+  max-width: 80%;
+}
+.save-adress {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0 44px;
+  background-color: #009d82;
+  border-radius: 4px;
+  border: 0;
+  line-height: 43px;
+  margin-bottom: 100px;
+}
+.popover-ul {
+  max-height: 350px;
+  overflow-y: auto;
+}
+.popover-ul::-webkit-scrollbar{
+  width:10px;
+  height:10px;
+  /**/
+}
+.popover-ul::-webkit-scrollbar-track{
+  background: rgb(239, 239, 239);
+  border-radius:2px;
+}
+.popover-ul::-webkit-scrollbar-thumb{
+  background: #bfbfbf;
+  border-radius:10px;
+}
+.popover-ul::-webkit-scrollbar-thumb:hover{
+  background: #333;
+}
+.popover-ul li {
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.red {
+  color: #ef0808;
 }
 @media (max-width: 767px) {
   .row {
     margin-left: 0;
     margin-right: 0;
+  }
+  .fapiaoneirong {
+    width: 90px;
   }
 }
