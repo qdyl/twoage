@@ -19,11 +19,11 @@
             <div class="left-header-logo col-xs-6 col-md-6">
                 <img src="images/header-logo-img.png" alt="">
             </div>
-            <div class="right-loginOrRegister pull-right">
+            <div class="right-loginOrRegister pull-right disnone">
                 <span class="user-login">登录</span>
                 <span class="user-register">注册</span>
             </div>
-            <div class="right-exit pull-right disnone">
+            <div class="right-exit pull-right ">
                 <span class="hidden-xs">欢迎您：</span>
                 <span class="user-name">zhanglili  </span>
                 <span class="loginout">退出</span>
@@ -56,8 +56,8 @@
     <div class="choose-topay-ways row">
         <h3 class="pay-way-title">支付方式</h3>
         <ul class="pay-way-ul clearfix">
-            <li class="pay-way-item zhifubao col-xs-5 col-md-5 col-lg-4" data-toggle="modal" data-target="#myModal-weixin"></li>
-            <li class="pay-way-item weixin col-xs-5 col-md-5 col-lg-4" data-toggle="modal" data-target="#myModal-zhifubao"></li>
+            <li class="pay-way-item zhifubao zhifubaoClass col-xs-5 col-md-5 col-lg-4" data-toggle="modal" data-target="#myModal-weixin"></li>
+            <li class="pay-way-item weixin weixinClass col-xs-5 col-md-5 col-lg-4" data-toggle="modal" data-target="#myModal-zhifubao"></li>
         </ul>
 
     </div>
@@ -138,6 +138,19 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
+    $(function () {
+        // 判断是否为微信浏览器
+        function is_weixn(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                $('.zhifubaoClass').hide();
+                $('.weixinClass').attr('data-target','');
+            } else {
+                return false;
+            }
+        };
+        is_weixn();
+    })
 
 </script>
 </html>
