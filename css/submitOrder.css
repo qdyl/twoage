@@ -15,13 +15,26 @@
 .goodstable-body {
   border: 1px solid #d1d1d1;
   border-top: 0; 
+  overflow: hidden;
 }
 .goodstable-body div {
   line-height: 30px;
-  padding: 8px 15px;
+  padding: 68px 15px;
 }
-.goodstable-body .col-sm-8 {
+.goodstable-body > div:not(:last-child) {
   border-right: 1px solid #d1d1d1;
+}
+.goodstable-body > div:not(:first-child) {
+  line-height: 30px;
+  padding: 68px 15px;
+}
+.goodstable-body > div:first-child {
+  line-height: 30px;
+  padding: 30px 15px;
+}
+.goodstable-body > div {
+  margin-bottom: -2000px!important;
+  padding-bottom: 2038px!important;
 }
 .agree {
   margin-top: 24px;
@@ -287,6 +300,10 @@
 }
 .red {
   color: #ef0808;
+}
+.cover {
+  width: 170px;
+  max-width: 100%;
 }
 @media (max-width: 767px) {
   .row {
